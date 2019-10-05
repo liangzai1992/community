@@ -68,8 +68,10 @@
             <version>2.1.0</version>
         </dependency>
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
     <build>
@@ -83,7 +85,9 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>6.0.4</version>
                 <configuration>
-                    <url>jdbc:h2:file:D:/BaiduNetdiskDownload/jeecg1/jeecg-boot-new/jeecg-boot-master/community/community</url>
+                    <url>
+                        jdbc:h2:file:D:/BaiduNetdiskDownload/jeecg1/jeecg-boot-new/jeecg-boot-master/community/community
+                    </url>
                     <user>sa</user>
                     <password>123</password>
                 </configuration>
@@ -93,6 +97,7 @@
                         <artifactId>h2</artifactId>
                         <version>1.4.197</version>
                     </dependency>
+
                 </dependencies>
             </plugin>
         </plugins>
