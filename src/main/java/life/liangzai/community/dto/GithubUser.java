@@ -1,4 +1,4 @@
-package life.majiang.community.community.dto;
+package life.liangzai.community.dto;
 
 /**
  * @program: community
@@ -10,6 +10,15 @@ public class GithubUser {
     private String name;
     private Long id;
     private String bio;
+
+    @Override
+    public String toString() {
+        return "GithubUser{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", bio='" + bio + '\'' +
+                '}';
+    }
 
     public String getName() {
         return name;
