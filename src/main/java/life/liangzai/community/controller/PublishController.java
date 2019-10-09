@@ -23,10 +23,10 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class PublishController {
 
-    @Autowired
+    @Autowired(required = false)
     private QuestionMapper questionMapper;
 
-    @Autowired
+    @Autowired(required = false)
     private UserMapper userMapper;
 
     @GetMapping("/publish")

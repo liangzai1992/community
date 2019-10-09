@@ -10,4 +10,7 @@ https://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
 https://flywaydb.org/getstarted/firststeps/maven
 mvn flyway:migrate
 
+https://mybatis.org/mybatis-3/configuration.html#properties
+https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html
+
 #工具

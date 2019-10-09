@@ -37,7 +37,7 @@ public class AuthorizeController {
     @Value("${github.client.url}")
     private String clientUrl;
 
-    @Autowired
+    @Autowired(required = false)
     private UserMapper userMapper;
 
     @GetMapping("/callback")
@@ -61,7 +61,7 @@ public class AuthorizeController {
             user.setAccountId(String.valueOf(githubUser.getId()));
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreate());
-            user.setAvatarUrl(githubUser.getAvatar_url());
+            user.setAvatarUrl(githubUser.getAvatarUrl());
             userMapper.insert(user);
             response.addCookie(new Cookie("token", token));
             return "redirect:/";
